@@ -3,9 +3,9 @@ import { serve } from '@hono/node-server';
 import authRoutes from './routers/auth';
 import todoRoutes from './routers/todo';
 
-const app = new Hono();
+const app = new Hono().basePath('/src')
 
-app.get('/', (c) => c.json('Hello Node.js!'))
+app.get('/', (c) => c.text('Hello Node.js!'))
 app.route('/auth', authRoutes);
 app.route('/todos', todoRoutes);
 serve({
