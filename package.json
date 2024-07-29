@@ -19,6 +19,5 @@
     "@types/pg": "^8.11.6",
     "tsx": "^4.7.1"
   },
-  "type": "module",
-  "main": "./src/index.js"
+  "type": "module"
 }
